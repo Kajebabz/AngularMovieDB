@@ -20,8 +20,11 @@ export class TvshowCardComponent implements OnInit {
 
   fetchTvseriesVideos() {
     this.tvshowsService.fetchTvseriesVideos(this.tvshow.id).subscribe(data => {
-      console.log(data)
-      const trailer = data.results.find((video: any) => video.type === 'Trailer');
+      const trailer = data.results.find((video: any) => 
+        video.type === 'Trailer' ||
+        video.type === 'Featurette' || 
+        video.type === 'Opening Credits' && 
+        video.site === 'YouTube');
       if (trailer) {
         this.trailerVideoId = trailer.key;
       }
@@ -29,12 +32,17 @@ export class TvshowCardComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(VideoDialogComponent, {
-      width: '80vw',
-      maxWidth: '100vw',
-      height: '45vw',
-      maxHeight: '100vh', 
-      data: { videoId: this.trailerVideoId }
-    });
+    if (this.trailerVideoId) {
+      this.dialog.open(VideoDialogComponent, {
+        width: '80vw',
+        maxWidth: '100vw',
+        height: '45vw',
+        maxHeight: '100vh',
+        data: { videoId: this.trailerVideoId }
+      });
+    } else {
+      console.error('No trailer video ID available');
+    }
   }
 }
+

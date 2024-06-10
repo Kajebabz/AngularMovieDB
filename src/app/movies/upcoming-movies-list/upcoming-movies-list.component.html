@@ -1,9 +1,10 @@
 <div class="container-fluid">
-    <div class="movie-card-container row">
-      <div class="col-lg-2 mb-4" *ngFor="let movie of movies">
-        <app-movie-card [movie]="movie"></app-movie-card>
-      </div>
+  <div class="movie-card-container row">
+    <div class="col-lg-2 mb-4" *ngFor="let movie of movies">
+      <app-movie-card [movie]="movie"></app-movie-card>
     </div>
-    <div *ngIf="isLoading">Loading...</div>
   </div>
+  <div *ngIf="isLoading">Loading...</div>
+</div>
+
   

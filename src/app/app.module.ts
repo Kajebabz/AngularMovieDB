@@ -13,11 +13,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { VideoDialogComponent } from './shared/video-dialog/video-dialog.component';
 import { PopularMoviesListComponent } from './movies/popular-movies-list/popular-movies-list.component';
 import { PopularTvshowsListComponent } from './tv-shows/popular-tvshows-list/popular-tvshows-list.component';
 import { TvshowCardComponent } from './tv-shows/tvshow-card/tvshow-card.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { TvshowCardComponent } from './tv-shows/tvshow-card/tvshow-card.componen
     VideoDialogComponent,
     PopularMoviesListComponent,
     PopularTvshowsListComponent,
-    TvshowCardComponent
+    TvshowCardComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { TvshowCardComponent } from './tv-shows/tvshow-card/tvshow-card.componen
     MatCardModule,
     MatDialogModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatPaginatorModule
   ],
   providers: [
     provideAnimationsAsync()
