@@ -6,10 +6,10 @@ import { VideoDialogComponent } from '../../shared/video-dialog/video-dialog.com
 @Component({
   selector: 'app-tvshow-card',
   templateUrl: './tvshow-card.component.html',
-  styleUrl: './tvshow-card.component.css'
+  styleUrls: ['./tvshow-card.component.css']
 })
 export class TvshowCardComponent implements OnInit {
-  @Input() tvshows: any;
+  @Input() tvshow: any;
   trailerVideoId: string = '';
 
   constructor(private tvshowsService: TvshowsService, public dialog: MatDialog) { }
@@ -19,7 +19,8 @@ export class TvshowCardComponent implements OnInit {
   }
 
   fetchTvseriesVideos() {
-    this.tvshowsService.fetchTvseriesVideos(this.tvshows.id).subscribe(data => {
+    this.tvshowsService.fetchTvseriesVideos(this.tvshow.id).subscribe(data => {
+      console.log(data)
       const trailer = data.results.find((video: any) => video.type === 'Trailer');
       if (trailer) {
         this.trailerVideoId = trailer.key;
@@ -36,5 +37,4 @@ export class TvshowCardComponent implements OnInit {
       data: { videoId: this.trailerVideoId }
     });
   }
-  
 }

@@ -20,6 +20,7 @@ export class MovieCardComponent implements OnInit {
 
   fetchMovieVideos() {
     this.moviesService.fetchMovieVideos(this.movie.id).subscribe(data => {
+      console.log(data)
       const trailer = data.results.find((video: any) => video.type === 'Trailer');
       if (trailer) {
         this.trailerVideoId = trailer.key;
@@ -29,10 +30,10 @@ export class MovieCardComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(VideoDialogComponent, {
-      width: '80vw',  // Set width to 80% of the viewport width
-      maxWidth: '100vw',  // Ensure it doesn't exceed the viewport width
-      height: '45vw', // Maintain aspect ratio (16:9) based on width
-      maxHeight: '100vh',  // Ensure it doesn't exceed the viewport height
+      width: '80vw',
+      maxWidth: '100vw',
+      height: '45vw',
+      maxHeight: '100vh', 
       data: { videoId: this.trailerVideoId }
     });
   }
