@@ -1,0 +1,8 @@
+<div class="container-fluid">
+    <div class="tvshow-card-container row">
+      <div class="col-lg-2 mb-4" *ngFor="let tvshow of tvShows">
+        <app-tvshow-card [tvshows]="tvshow"></app-tvshow-card>
+      </div>
+    </div>
+    <div *ngIf="isLoading">Loading...</div>
+  </div>

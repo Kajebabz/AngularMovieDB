@@ -21,5 +21,9 @@ export class MoviesService {
   fetchUpcomingMovies(page: number) {
     return this.http.get<any>(`${this.apiUrl}/movie/upcoming?api_key=${this.apiKey}&page=${page}`);
   }
+
+  fetchPopularMovies(page: number) {
+    return this.http.get<any>(`${this.apiUrl}/discover/movie?api_key=${this.apiKey}&page=${page}`);
+  }
 }
 

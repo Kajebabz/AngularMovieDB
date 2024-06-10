@@ -1,0 +1,24 @@
+/* Position the close button in the top right corner */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black; /* Set the color of the close icon to black */
+  }
+  
+  /* Ensure the dialog content area takes full space */
+  .dialog-content {
+    height: calc(100vh - 64px); /* Adjust for dialog title height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  
+  /* Ensure the iframe fills the dialog content area */
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  

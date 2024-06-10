@@ -2,7 +2,7 @@
    <mat-card class="moviecard">
     <img mat-card-image [src]="'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + movie.poster_path" [alt]="movie.title" />
     <mat-card-content>
-      <h5 class="mat-card-title">{{ movie.title.substring(0, 200) }}</h5>
+      <h3 class="mat-card-title">{{ movie.title.substring(0, 200) }}</h3>
       <mat-icon aria-hidden="true">star_half</mat-icon>
       <span class="ml-1">{{ movie.vote_average }}</span>
       <p class="mat-card-subtitle">{{ movie.overview.substring(0, 125).concat('....') }}</p>
@@ -11,7 +11,7 @@
           <mat-icon aria-hidden="true">event</mat-icon>
           <span class="ml-1">{{ movie.release_date }}</span>
         </div>
-        <mat-icon aria-hidden="true">play_circle</mat-icon>
+        <mat-icon aria-hidden="true" class="cursor-icon" (click)="openDialog()">play_circle</mat-icon>
       </div>
     </mat-card-content>
   </mat-card>

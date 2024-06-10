@@ -5,18 +5,28 @@
         <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/HighestRatedMovies" routerLinkActive="active">Highest Rated</a>
+        <a class="nav-link" routerLink="/Movies/PopularMovies" routerLinkActive="active">Popular</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/UpcomingMovies" routerLinkActive="active">Upcoming</a>
+        <a class="nav-link" routerLink="/Movies/HighestRatedMovies" routerLinkActive="active">Highest Rated</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Movies/UpcomingMovies" routerLinkActive="active">Upcoming</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/TvShows/PopularTvShows" routerLinkActive="active">Popular Tv Series</a>
       </li>
     </ul>
   </nav>
-  <span class='h2'>
-    <img class="rounded movie_img m-3" src="/assets/Image/movie_black2.jpg" width="50" height="50" alt="SuperFlotBillede"/>
-    Angular Moviefinder
-  </span>
+  <div class="d-flex flex-column align-items-start">
+    <span class="h2">
+      <img class="rounded movie_img m-3" src="/assets/Image/movie_black2.jpg" width="50" height="50" alt="SuperFlotBillede"/>
+      Angular Moviefinder
+    </span>
+    <span class="p-1">Find all your info about movies here!</span>
+  </div>
 </div>
+
 
 
 

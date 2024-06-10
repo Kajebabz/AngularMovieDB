@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from '../services/movies.service';
+import { MoviesService } from '../../services/movies.service';
 
 @Component({
-  selector: 'app-highest-rated-movies-list',
-  templateUrl: './highest-rated-movies-list.component.html',
-  styleUrls: ['./highest-rated-movies-list.component.css']
+  selector: 'app-upcoming-movies-list',
+  templateUrl: './upcoming-movies-list.component.html',
+  styleUrls: ['./upcoming-movies-list.component.css']
 })
-export class HighestRatedMoviesListComponent implements OnInit {
+export class UpcomingMoviesListComponent implements OnInit {
   currentPage: number = 1;
   movies: any[] = [];
   isLoading: boolean = true;
@@ -18,8 +18,8 @@ export class HighestRatedMoviesListComponent implements OnInit {
   }
 
   fetchMovies() {
-    this.moviesService.fetchHighestRatedMovies(this.currentPage).subscribe(data => {
-      this.movies = data.results.filter((movie: any) => movie.poster_path !== null && movie.vote_average !== 0);
+    this.moviesService.fetchUpcomingMovies(this.currentPage).subscribe(data => {
+      this.movies = data.results.filter((movie: any) => movie.poster_path !== null);
       this.isLoading = false;
     });
   }
@@ -36,3 +36,4 @@ export class HighestRatedMoviesListComponent implements OnInit {
     }
   }
 }
+

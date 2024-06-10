@@ -5,4 +5,10 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
   }
-  
+  .movie-card-container{
+    margin-top: 20px;
+}
+
+.tvshow-card-container{
+    margin-top: 20px;
+}

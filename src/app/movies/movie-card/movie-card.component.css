@@ -9,4 +9,8 @@
   .moviecard mat-card-content {
     padding: 16px; /* Ensure padding inside the card content */
   }
+
+  .cursor-icon {
+    cursor: pointer;
+  }
   
