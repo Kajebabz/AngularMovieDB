@@ -1,0 +1,15 @@
+.personcard {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(240, 238, 238, 0.1);
+    margin: 4px;
+    background-color: #32383e;
+  }
+  
+  .personcard mat-card-content {
+    padding: 16px;
+  }
+
+  .cursor-icon {
+    cursor: pointer;
+  }

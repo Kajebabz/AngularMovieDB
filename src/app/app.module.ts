@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieCardComponent } from './movies/movie-card/movie-card.component';
@@ -20,6 +19,8 @@ import { PopularMoviesListComponent } from './movies/popular-movies-list/popular
 import { PopularTvshowsListComponent } from './tv-shows/popular-tvshows-list/popular-tvshows-list.component';
 import { TvshowCardComponent } from './tv-shows/tvshow-card/tvshow-card.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
+import { PopularPersonsListComponent } from './persons/popular-persons-list/popular-persons-list.component';
+import { PersonCardComponent } from './persons/person-card/person-card.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
     PopularMoviesListComponent,
     PopularTvshowsListComponent,
     TvshowCardComponent,
-    PaginationComponent
+    PaginationComponent,
+    PopularPersonsListComponent,
+    PersonCardComponent
   ],
   imports: [
     BrowserModule,
