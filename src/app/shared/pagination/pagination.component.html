@@ -1,7 +1,8 @@
-<mat-paginator
-  [length]="totalItems"
-  [pageSize]="pageSize"
-  [pageSizeOptions]="pageSizeOptions"
-  (page)="pageChanged($event)">
-</mat-paginator>
-
+<div class="pagination-container d-flex justify-content-center align-items-center">
+    <button mat-button class="pagination-button" (click)="onPrevious()" [disabled]="currentPage === 1">Previous</button>
+    <span class="mx-2">Page {{ currentPage }} of {{ totalPages }}</span>
+    <button mat-button class="pagination-button" (click)="onNext()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+  
+  
+  

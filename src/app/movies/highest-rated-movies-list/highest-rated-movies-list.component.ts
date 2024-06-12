@@ -8,6 +8,7 @@ import { MoviesService } from '../../services/movies.service';
 })
 export class HighestRatedMoviesListComponent implements OnInit {
   currentPage: number = 1;
+  totalPages: number = 1;
   movies: any[] = [];
   isLoading: boolean = true;
 
@@ -20,16 +21,19 @@ export class HighestRatedMoviesListComponent implements OnInit {
   fetchMovies() {
     this.moviesService.fetchHighestRatedMovies(this.currentPage).subscribe(data => {
       this.movies = data.results.filter((movie: any) => movie.poster_path !== null && movie.vote_average !== 0);
+      this.totalPages = data.total_pages;
       this.isLoading = false;
     });
   }
 
-  nextPage() {
-    this.currentPage++;
-    this.fetchMovies();
+  onNextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.fetchMovies();
+    }
   }
 
-  previousPage() {
+  onPreviousPage(): void {
     if (this.currentPage > 1) {
       this.currentPage--;
       this.fetchMovies();

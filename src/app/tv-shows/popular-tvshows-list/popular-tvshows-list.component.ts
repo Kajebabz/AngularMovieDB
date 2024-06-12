@@ -8,6 +8,7 @@ import { TvshowsService } from '../../services/tvshows.service';
 })
 export class PopularTvshowsListComponent implements OnInit {
   currentPage: number = 1;
+  totalPages: number = 1;
   tvShows: any[] = [];
   isLoading: boolean = true;
 
@@ -20,16 +21,19 @@ export class PopularTvshowsListComponent implements OnInit {
   fetchTvShows() {
     this.tvshowsService.fetchPopularTvshows(this.currentPage).subscribe(data => {
       this.tvShows = data.results.filter((tvshow: any) => tvshow.poster_path !== null && tvshow.vote_average !== 0);
+      this.totalPages = data.total_pages;
       this.isLoading = false;
     });
   }
 
-  nextPage() {
-    this.currentPage++;
-    this.fetchTvShows();
+  onNextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.fetchTvShows();
+    }
   }
 
-  previousPage() {
+  onPreviousPage(): void {
     if (this.currentPage > 1) {
       this.currentPage--;
       this.fetchTvShows();

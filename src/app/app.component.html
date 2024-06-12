@@ -1,32 +1,36 @@
 <div class="headerNav jumbotron pb-3 pt-3">
-  <nav class="navbar navbar-expand-lg">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/Movies/PopularMovies" routerLinkActive="active">Popular</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/Movies/HighestRatedMovies" routerLinkActive="active">Highest Rated</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/Movies/UpcomingMovies" routerLinkActive="active">Upcoming</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/TvShows/PopularTvShows" routerLinkActive="active">Popular Tv Series</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/Persons/PopularPersons" routerLinkActive="active">Popular Persons</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="d-flex flex-column align-items-start">
-    <span class="h2">
-      <img class="rounded movie_img m-3" src="/assets/Image/movie_black2.jpg" width="50" height="50" alt="SuperFlotBillede"/>
-      Angular Moviefinder
-    </span>
-    <span class="p-1">Find all your info about movies here!</span>
+  <div class="headerNavMeow">
+    <nav class="navbar navbar-expand-lg">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Movies/PopularMovies" routerLinkActive="active">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Movies/HighestRatedMovies" routerLinkActive="active">Highest Rated</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Movies/UpcomingMovies" routerLinkActive="active">Upcoming</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/TvShows/PopularTvShows" routerLinkActive="active">Popular Tv Series</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Persons/PopularPersons" routerLinkActive="active">Popular Persons</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="d-flex flex-column align-items-start">
+      <span class="h2">
+        <img class="rounded movie_img m-3" src="/assets/Image/movie_black2.jpg" width="50" height="50"
+          alt="SuperFlotBillede" />
+        Angular Moviefinder
+      </span>
+      <span class="p-1">Find all your info about movies here!</span>
+    </div>
   </div>
 </div>
 
@@ -36,4 +40,3 @@
 
 
 <router-outlet></router-outlet>
-

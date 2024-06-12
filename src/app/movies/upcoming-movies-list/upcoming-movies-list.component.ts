@@ -8,9 +8,9 @@ import { MoviesService } from '../../services/movies.service';
 })
 export class UpcomingMoviesListComponent implements OnInit {
   currentPage: number = 1;
+  totalPages: number = 1;
   movies: any[] = [];
   isLoading: boolean = true;
-  totalItems: number = 0; // Total number of items to be paginated
 
   constructor(private moviesService: MoviesService) {}
 
@@ -21,15 +21,23 @@ export class UpcomingMoviesListComponent implements OnInit {
   fetchMovies() {
     this.moviesService.fetchUpcomingMovies(this.currentPage).subscribe(data => {
       this.movies = data.results.filter((movie: any) => movie.poster_path !== null);
-      this.totalItems = data.total_results; // Assign total items for pagination
+      this.totalPages = data.total_pages;
       this.isLoading = false;
     });
   }
 
-  onPageChange(page: number) {
-    this.currentPage = page;
-    this.fetchMovies(); // Fetch movies for the new page
+  onNextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.fetchMovies();
+    }
+  }
+
+  onPreviousPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.fetchMovies();
+    }
   }
 }
-
 

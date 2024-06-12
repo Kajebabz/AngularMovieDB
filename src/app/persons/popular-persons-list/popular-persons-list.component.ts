@@ -8,6 +8,7 @@ import { PersonsService } from '../../services/persons.service';
 })
 export class PopularPersonsListComponent implements OnInit {
   currentPage: number = 1;
+  totalPages: number = 0; // Add totalPages to track total pages count
   persons: any[] = [];
   isLoading: boolean = true;
 
@@ -22,8 +23,28 @@ export class PopularPersonsListComponent implements OnInit {
     this.personsService.fetchPopularPersons(this.currentPage).subscribe(
       (data) => {
         this.persons = data.results.filter((person: any) => person.profile_path !== null);
+        this.totalPages = data.total_pages; // Assume this is available in the API response
         this.isLoading = false;
       },
+      (error) => {
+        this.isLoading = false;
+        console.error('Error loading persons', error);
+      }
     );
   }
+
+  onNextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.fetchPersons();
+    }
+  }
+
+  onPreviousPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.fetchPersons();
+    }
+  }
 }
+

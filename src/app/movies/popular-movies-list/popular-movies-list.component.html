@@ -1,4 +1,12 @@
 <div class="container-fluid">
+    
+    <app-pagination 
+    [currentPage]="currentPage" 
+    [totalPages]="totalPages" 
+    (nextPage)="onNextPage()" 
+    (previousPage)="onPreviousPage()">
+  </app-pagination>
+
     <div class="movie-card-container row">
       <div class="col-lg-2 mb-4" *ngFor="let movie of movies">
         <app-movie-card [movie]="movie"></app-movie-card>

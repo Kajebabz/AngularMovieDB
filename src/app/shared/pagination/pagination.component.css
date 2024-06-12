@@ -1,0 +1,28 @@
+.pagination-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .pagination-button {
+    font-size: 0.9375rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    margin: 0 5px;
+    background-color: transparent;
+    color: white !important;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .pagination-button:hover {
+    background-color: #f5f5f5;
+    color: black !important;
+  }
+  
+  .pagination-button:disabled {
+    color: white;
+    opacity: 0.5;
+  }
+  
+  
+  
