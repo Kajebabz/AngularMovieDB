@@ -25,5 +25,9 @@ export class MoviesService {
   fetchPopularMovies(page: number) {
     return this.http.get<any>(`${this.apiUrl}/discover/movie?api_key=${this.apiKey}&page=${page}`);
   }
+
+  searchMovies(searchQuery: string, page: number) {
+    return this.http.get<any>(`${this.apiUrl}/search/movie?api_key=${this.apiKey}&query=${searchQuery}&page=${page}`);
+  }
 }
 

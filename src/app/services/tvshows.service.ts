@@ -17,4 +17,8 @@ export class TvshowsService {
   fetchTvseriesVideos(seriesId: number) {
     return this.http.get<any>(`${this.apiUrl}/tv/${seriesId}/videos?api_key=${this.apiKey}`);
   }
+
+  searchTvShows(searchQuery: string, page: number) {
+    return this.http.get<any>(`${this.apiUrl}/search/tv?api_key=${this.apiKey}&query=${searchQuery}&page=${page}`);
+  }
 }

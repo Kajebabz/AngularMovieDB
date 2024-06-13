@@ -1,13 +1,13 @@
   .moviecard {
-    border: 1px solid #000000; /* Light gray border */
-    border-radius: 4px; /* Optional: rounded corners */
-    box-shadow: 0 2px 8px rgba(240, 238, 238, 0.1); /* Optional: subtle shadow */
-    margin: 4px; /* Optional: space around the card */
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(240, 238, 238, 0.1);
+    margin: 4px;
     background-color: #32383e;
   }
   
   .moviecard mat-card-content {
-    padding: 16px; /* Ensure padding inside the card content */
+    padding: 16px;
   }
 
   .cursor-icon {

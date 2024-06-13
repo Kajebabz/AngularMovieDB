@@ -14,7 +14,7 @@ export class PersonsService {
     return this.http.get<any>(`${this.apiUrl}/person/popular?api_key=${this.apiKey}&page=${page}`);
   }
 
-  fetchPersonData(personId: number) {
-    return this.http.get<any>(`${this.apiUrl}/person/${personId}?api_key=${this.apiKey}`);
+  searchPersons(searchQuery: string, page: number) {
+    return this.http.get<any>(`${this.apiUrl}/search/person?api_key=${this.apiKey}&query=${searchQuery}&page=${page}`);
   }
 }

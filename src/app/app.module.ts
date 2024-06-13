@@ -21,6 +21,11 @@ import { TvshowCardComponent } from './tv-shows/tvshow-card/tvshow-card.componen
 import { PaginationComponent } from './shared/pagination/pagination.component';
 import { PopularPersonsListComponent } from './persons/popular-persons-list/popular-persons-list.component';
 import { PersonCardComponent } from './persons/person-card/person-card.component';
+import { SearchBarComponent } from './shared/search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
+import { SearchedPersonsListComponent } from './persons/searched-persons-list/searched-persons-list.component';
+import { SearchedTvshowsListComponent } from './tv-shows/searched-tvshows-list/searched-tvshows-list.component';
+import { SearchedMoviesListComponent } from './movies/searched-movies-list/searched-movies-list.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,11 @@ import { PersonCardComponent } from './persons/person-card/person-card.component
     TvshowCardComponent,
     PaginationComponent,
     PopularPersonsListComponent,
-    PersonCardComponent
+    PersonCardComponent,
+    SearchBarComponent,
+    SearchedPersonsListComponent,
+    SearchedTvshowsListComponent,
+    SearchedMoviesListComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +55,8 @@ import { PersonCardComponent } from './persons/person-card/person-card.component
     MatDialogModule,
     MatButtonModule,
     MatToolbarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()
