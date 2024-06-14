@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
 
 @Component({
-  selector: 'app-highest-rated-movies-list',
-  templateUrl: './highest-rated-movies-list.component.html',
-  styleUrls: ['./highest-rated-movies-list.component.css']
+    selector: 'app-highest-rated-movies-list',
+    templateUrl: './highest-rated-movies-list.component.html',
+    styleUrls: ['./highest-rated-movies-list.component.css'],
 })
 export class HighestRatedMoviesListComponent implements OnInit {
   currentPage: number = 1;
