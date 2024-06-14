@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { TvshowsService } from '../../services/tvshows.service';
+import { TvshowCardComponent } from '../tvshow-card/tvshow-card.component';
+
+import { PaginationComponent } from '../../shared/pagination/pagination.component';
 
 @Component({
-  selector: 'app-popular-tvshows-list',
-  templateUrl: './popular-tvshows-list.component.html',
-  styleUrls: ['./popular-tvshows-list.component.css']
+    selector: 'app-popular-tvshows-list',
+    templateUrl: './popular-tvshows-list.component.html',
+    styleUrls: ['./popular-tvshows-list.component.css'],
+    standalone: true,
+    imports: [PaginationComponent, TvshowCardComponent]
 })
 export class PopularTvshowsListComponent implements OnInit {
   currentPage: number = 1;

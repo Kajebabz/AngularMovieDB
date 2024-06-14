@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MoviesService } from '../../services/movies.service';
+import { MovieCardComponent } from '../movie-card/movie-card.component';
+
+import { PaginationComponent } from '../../shared/pagination/pagination.component';
 
 @Component({
-  selector: 'app-searched-movies-list',
-  templateUrl: './searched-movies-list.component.html',
-  styleUrl: './searched-movies-list.component.css'
+    selector: 'app-searched-movies-list',
+    templateUrl: './searched-movies-list.component.html',
+    styleUrl: './searched-movies-list.component.css',
+    standalone: true,
+    imports: [PaginationComponent, MovieCardComponent]
 })
 export class SearchedMoviesListComponent implements OnInit {
   searchQuery: string = '';

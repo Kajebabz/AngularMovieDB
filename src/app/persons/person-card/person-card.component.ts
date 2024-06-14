@@ -1,9 +1,13 @@
 import { Component, Input } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
+import { MatCard, MatCardImage, MatCardContent } from '@angular/material/card';
 
 @Component({
-  selector: 'app-person-card',
-  templateUrl: './person-card.component.html',
-  styleUrls: ['./person-card.component.css']
+    selector: 'app-person-card',
+    templateUrl: './person-card.component.html',
+    styleUrls: ['./person-card.component.css'],
+    standalone: true,
+    imports: [MatCard, MatCardImage, MatCardContent, MatIcon]
 })
 export class PersonCardComponent {
   @Input() person: any;

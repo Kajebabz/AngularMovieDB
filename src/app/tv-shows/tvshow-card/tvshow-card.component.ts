@@ -3,10 +3,15 @@ import { MatDialog } from '@angular/material/dialog';
 import { TvshowsService } from '../../services/tvshows.service';
 import { VideoDialogComponent } from '../../shared/video-dialog/video-dialog.component';
 
+import { MatIcon } from '@angular/material/icon';
+import { MatCard, MatCardImage, MatCardContent } from '@angular/material/card';
+
 @Component({
-  selector: 'app-tvshow-card',
-  templateUrl: './tvshow-card.component.html',
-  styleUrls: ['./tvshow-card.component.css']
+    selector: 'app-tvshow-card',
+    templateUrl: './tvshow-card.component.html',
+    styleUrls: ['./tvshow-card.component.css'],
+    standalone: true,
+    imports: [MatCard, MatCardImage, MatCardContent, MatIcon]
 })
 export class TvshowCardComponent implements OnInit {
   @Input() tvshow: any;

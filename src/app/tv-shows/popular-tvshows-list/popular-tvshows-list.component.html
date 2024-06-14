@@ -1,17 +1,20 @@
 <div class="container-fluid">
 
-    <app-pagination 
-    [currentPage]="currentPage" 
-    [totalPages]="totalPages" 
-    (nextPage)="onNextPage()" 
+  <app-pagination
+    [currentPage]="currentPage"
+    [totalPages]="totalPages"
+    (nextPage)="onNextPage()"
     (previousPage)="onPreviousPage()">
   </app-pagination>
-  
-    <div class="tvshow-card-container row">
-      <div class="col-lg-2 mb-4" *ngFor="let tvshow of tvShows">
+
+  <div class="tvshow-card-container row">
+    @for (tvshow of tvShows; track tvshow) {
+      <div class="col-lg-2 mb-4">
         <app-tvshow-card [tvshow]="tvshow"></app-tvshow-card>
       </div>
-    </div>
-    <div *ngIf="isLoading">Loading...</div>
+    }
   </div>
-  
+  @if (isLoading) {
+    <div>Loading...</div>
+  }
+</div>

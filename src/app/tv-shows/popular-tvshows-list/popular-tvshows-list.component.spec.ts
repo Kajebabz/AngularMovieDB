@@ -8,8 +8,8 @@ describe('PopularTvshowsListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PopularTvshowsListComponent]
-    })
+    imports: [PopularTvshowsListComponent]
+})
     .compileComponents();
     
     fixture = TestBed.createComponent(PopularTvshowsListComponent);

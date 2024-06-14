@@ -11,13 +11,15 @@
         <mat-icon aria-hidden="true">event</mat-icon>
         <span class="ml-1">First Air: {{ tvshow.first_air_date }}</span>
       </div>
-      <div *ngIf="trailerVideoId">
-        <mat-icon aria-hidden="true" class="cursor-icon" (click)="openDialog()">play_circle</mat-icon>
-      </div>
+      @if (trailerVideoId) {
+        <div>
+          <mat-icon aria-hidden="true" class="cursor-icon" (click)="openDialog()">play_circle</mat-icon>
+        </div>
+      }
     </div>
   </mat-card-content>
 </mat-card>
 
-  
-  
-  
+
+
+
