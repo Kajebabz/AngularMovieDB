@@ -1,16 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TvshowsService } from '../../services/tvshows.service';
-import { TvshowCardComponent } from '../tvshow-card/tvshow-card.component';
-
-import { PaginationComponent } from '../../shared/pagination/pagination.component';
 
 @Component({
-    selector: 'app-searched-tvshows-list',
-    templateUrl: './searched-tvshows-list.component.html',
-    styleUrl: './searched-tvshows-list.component.css',
-    standalone: true,
-    imports: [PaginationComponent, TvshowCardComponent]
+  selector: 'app-searched-tvshows-list',
+  templateUrl: './searched-tvshows-list.component.html',
+  styleUrl: './searched-tvshows-list.component.css'
 })
 export class SearchedTvshowsListComponent implements OnInit {
   searchQuery: string = '';

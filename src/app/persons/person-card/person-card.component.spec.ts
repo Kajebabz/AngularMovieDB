@@ -8,8 +8,8 @@ describe('PersonCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [PersonCardComponent]
-})
+      declarations: [PersonCardComponent]
+    })
     .compileComponents();
     
     fixture = TestBed.createComponent(PersonCardComponent);

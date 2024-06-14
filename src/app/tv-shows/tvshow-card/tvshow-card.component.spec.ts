@@ -8,8 +8,8 @@ describe('TvshowCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [TvshowCardComponent]
-})
+      declarations: [TvshowCardComponent]
+    })
     .compileComponents();
     
     fixture = TestBed.createComponent(TvshowCardComponent);

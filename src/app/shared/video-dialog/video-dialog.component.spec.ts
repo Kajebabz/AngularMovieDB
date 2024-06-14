@@ -8,8 +8,8 @@ describe('VideoDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [VideoDialogComponent]
-})
+      declarations: [VideoDialogComponent]
+    })
     .compileComponents();
     
     fixture = TestBed.createComponent(VideoDialogComponent);

@@ -1,15 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonsService } from '../../services/persons.service';
-import { PersonCardComponent } from '../person-card/person-card.component';
-
-import { PaginationComponent } from '../../shared/pagination/pagination.component';
 
 @Component({
-    selector: 'app-popular-persons-list',
-    templateUrl: './popular-persons-list.component.html',
-    styleUrls: ['./popular-persons-list.component.css'],
-    standalone: true,
-    imports: [PaginationComponent, PersonCardComponent]
+  selector: 'app-popular-persons-list',
+  templateUrl: './popular-persons-list.component.html',
+  styleUrls: ['./popular-persons-list.component.css']
 })
 export class PopularPersonsListComponent implements OnInit {
   currentPage: number = 1;

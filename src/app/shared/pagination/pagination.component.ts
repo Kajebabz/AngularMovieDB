@@ -1,12 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MatButton } from '@angular/material/button';
 
 @Component({
-    selector: 'app-pagination',
-    templateUrl: './pagination.component.html',
-    styleUrls: ['./pagination.component.css'],
-    standalone: true,
-    imports: [MatButton]
+  selector: 'app-pagination',
+  templateUrl: './pagination.component.html',
+  styleUrls: ['./pagination.component.css']
 })
 export class PaginationComponent {
   @Input() currentPage: number = 1;

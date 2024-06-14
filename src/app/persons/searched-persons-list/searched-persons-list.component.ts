@@ -1,16 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersonsService } from '../../services/persons.service';
-import { PersonCardComponent } from '../person-card/person-card.component';
-
-import { PaginationComponent } from '../../shared/pagination/pagination.component';
 
 @Component({
-    selector: 'app-searched-persons-list',
-    templateUrl: './searched-persons-list.component.html',
-    styleUrls: ['./searched-persons-list.component.css'],
-    standalone: true,
-    imports: [PaginationComponent, PersonCardComponent]
+  selector: 'app-searched-persons-list',
+  templateUrl: './searched-persons-list.component.html',
+  styleUrls: ['./searched-persons-list.component.css']
 })
 export class SearchedPersonsListComponent implements OnInit {
   searchQuery: string = '';

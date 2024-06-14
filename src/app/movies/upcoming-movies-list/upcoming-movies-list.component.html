@@ -1,21 +1,18 @@
 <div class="container-fluid">
-
-  <app-pagination
-    [currentPage]="currentPage"
-    [totalPages]="totalPages"
-    (nextPage)="onNextPage()"
-    (previousPage)="onPreviousPage()">
-  </app-pagination>
+  
+  <app-pagination 
+  [currentPage]="currentPage" 
+  [totalPages]="totalPages" 
+  (nextPage)="onNextPage()" 
+  (previousPage)="onPreviousPage()">
+</app-pagination>
 
   <div class="movie-card-container row">
-    @for (movie of movies; track movie) {
-      <div class="col-lg-2 mb-4">
-        <app-movie-card [movie]="movie"></app-movie-card>
-      </div>
-    }
+    <div class="col-lg-2 mb-4" *ngFor="let movie of movies">
+      <app-movie-card [movie]="movie"></app-movie-card>
+    </div>
   </div>
-  @if (isLoading) {
-    <div>Loading...</div>
-  }
+  <div *ngIf="isLoading">Loading...</div>
 </div>
 
+  

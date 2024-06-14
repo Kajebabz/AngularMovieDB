@@ -1,15 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
-import { MovieCardComponent } from '../movie-card/movie-card.component';
-
-import { PaginationComponent } from '../../shared/pagination/pagination.component';
 
 @Component({
-    selector: 'app-upcoming-movies-list',
-    templateUrl: './upcoming-movies-list.component.html',
-    styleUrls: ['./upcoming-movies-list.component.css'],
-    standalone: true,
-    imports: [PaginationComponent, MovieCardComponent]
+  selector: 'app-upcoming-movies-list',
+  templateUrl: './upcoming-movies-list.component.html',
+  styleUrls: ['./upcoming-movies-list.component.css']
 })
 export class UpcomingMoviesListComponent implements OnInit {
   currentPage: number = 1;

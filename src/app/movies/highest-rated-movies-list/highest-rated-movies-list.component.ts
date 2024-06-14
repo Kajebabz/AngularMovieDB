@@ -1,18 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
-import { MovieCardComponent } from '../movie-card/movie-card.component';
-
-import { PaginationComponent } from '../../shared/pagination/pagination.component';
 
 @Component({
     selector: 'app-highest-rated-movies-list',
     templateUrl: './highest-rated-movies-list.component.html',
     styleUrls: ['./highest-rated-movies-list.component.css'],
-    standalone: true,
-    imports: [
-    PaginationComponent,
-    MovieCardComponent
-],
 })
 export class HighestRatedMoviesListComponent implements OnInit {
   currentPage: number = 1;

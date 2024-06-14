@@ -1,15 +1,11 @@
 import { Component, Inject } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { MAT_DIALOG_DATA, MatDialogTitle, MatDialogClose, MatDialogContent } from '@angular/material/dialog';
-import { MatIcon } from '@angular/material/icon';
-import { MatIconButton } from '@angular/material/button';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-    selector: 'app-video-dialog',
-    templateUrl: './video-dialog.component.html',
-    styleUrls: ['./video-dialog.component.css'],
-    standalone: true,
-    imports: [MatDialogTitle, MatIconButton, MatDialogClose, MatIcon, MatDialogContent]
+  selector: 'app-video-dialog',
+  templateUrl: './video-dialog.component.html',
+  styleUrls: ['./video-dialog.component.css']
 })
 export class VideoDialogComponent {
   videoUrl: SafeResourceUrl;

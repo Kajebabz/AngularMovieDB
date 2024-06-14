@@ -8,8 +8,8 @@ describe('HighestRatedMoviesListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [HighestRatedMoviesListComponent]
-})
+      declarations: [HighestRatedMoviesListComponent]
+    })
     .compileComponents();
     
     fixture = TestBed.createComponent(HighestRatedMoviesListComponent);
