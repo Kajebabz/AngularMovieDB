@@ -39,7 +39,8 @@ export class TvshowCardComponent implements OnInit {
         height: '50%',
         // maxHeight: '100vh', 
         data: { videoId: this.trailerVideoId },
-        panelClass: 'custom-height-adjustment'
+        panelClass: 'custom-height-adjustment',
+        disableClose: false
       });
     } else {
       console.error('No trailer video ID available');
