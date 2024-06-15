@@ -30,11 +30,12 @@ export class MovieCardComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(VideoDialogComponent, {
-      width: '80vw',
-      maxWidth: '100vw',
-      height: '45vw',
-      maxHeight: '100vh', 
-      data: { videoId: this.trailerVideoId }
+      width: '60%',
+      // maxWidth: '100vw',
+      height: '50%',
+      // maxHeight: '100vh', 
+      data: { videoId: this.trailerVideoId },
+      panelClass: 'custom-height-adjustment'
     });
   }
   

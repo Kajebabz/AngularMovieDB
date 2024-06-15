@@ -12,3 +12,7 @@ body {
 .tvshow-card-container{
     margin-top: 20px;
 }
+
+.custom-height-adjustment .mdc-dialog__container {
+  height: auto;
+}

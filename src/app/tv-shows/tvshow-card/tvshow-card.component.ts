@@ -34,11 +34,12 @@ export class TvshowCardComponent implements OnInit {
   openDialog() {
     if (this.trailerVideoId) {
       this.dialog.open(VideoDialogComponent, {
-        width: '80vw',
-        maxWidth: '100vw',
-        height: '45vw',
-        maxHeight: '100vh',
-        data: { videoId: this.trailerVideoId }
+        width: '60%',
+        // maxWidth: '100vw',
+        height: '50%',
+        // maxHeight: '100vh', 
+        data: { videoId: this.trailerVideoId },
+        panelClass: 'custom-height-adjustment'
       });
     } else {
       console.error('No trailer video ID available');
